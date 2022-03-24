@@ -1,0 +1,159 @@
+*,*:before,*:after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: #FEFCFD;
+    font-family: 'Play', sans-serif;
+}
+
+body{
+    background-color: #231a2b;
+}
+#logo{
+    display: block;
+}
+#navBar{
+    display:flex;
+    position: absolute;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 7vh;
+    font-size: 1.3vw;
+}
+#logo{
+    
+    transform: scale(1.1);
+}
+
+#menupng{
+    transform: scale(0.8);
+}
+
+.navegacion{
+    list-style:decimal-leading-zero;
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+nav ul li{
+    margin-right: 2vw ;
+    margin-left: 2vw;
+}
+nav ul li:hover{
+    text-decoration: underline ;
+    color: #d5b0f1;
+
+}
+.ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.ham span{
+    display: block;
+    background-color: #FEFCFD;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+main{
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hero{
+    font-size: 5vw;
+}
+.hero span{
+    display: block;
+    color: #d5b0f1;
+    white-space: nowrap;
+    width: 28ch;
+    
+    animation: escrito 2s steps(28);
+    overflow: hidden;
+}
+@keyframes escrito{
+    from{ width: 0;
+    border-right: 4px solid #d5b0f1;}
+
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 0.4%;
+    height: 98vh;
+    width: 2vw;
+    position: fixed;
+    z-index: 1000;
+}
+.redes ul{
+    list-style: none;
+}
+.icon{
+    fill:rgb(255, 255, 255);
+    width: 25px;
+    height: auto;
+}
+.icon:hover{
+    fill: #d5b0f1;
+}
+/*Diseño Responsivo*/
+@media(max-width:768px){
+    .ham{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        top:0;
+        right: 5%;
+    }
+    .navegacion{
+        background-color: #70538a;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        margin-left: 10vw;
+        z-index: 9998;
+        flex-direction: column;
+        align-items: center;
+        font-size: 6vw;
+        padding-left: 7vw;
+        display: none;
+        
+    }
+    .navegacionActivada{
+        display: flex;
+        animation: muestraMenu 1s ease-in-out both;
+    }
+/*Animaciones*/
+
+    @keyframes muestraMenu{
+        0%{
+            transform: translateX(100%);
+        }
+    }
+
+    /*Haciendo una X para cerrar navBar activado*/
+    .br-1.animado{
+        transition: 0.7s;
+        transform: rotate(-45deg) translate(-10px,8px);
+    }
+    .br-2.animado{
+        transition: 0.7s;
+        opacity: 0;
+    }
+    .br-3.animado{
+        transition: 0.7s;
+        transform: rotate(45deg) translate(-10px,-8px);
+    }
+}
