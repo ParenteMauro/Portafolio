@@ -9,22 +9,31 @@
 body{
     background-color: #231a2b;
 }
+
 #logo{
     display: block;
+    top:1%;
+    z-index: 1000;
+    
 }
+
 #navBar{
     display:flex;
-    position: absolute;
     position: fixed;
+    z-index: 100;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 7vh;
-    font-size: 1.3vw;
-}
-#logo{
+    font-size: 1.2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     
+}
+
+#logo{
     transform: scale(1.1);
+    position: absolute;
 }
 
 #menupng{
@@ -34,19 +43,26 @@ body{
 .navegacion{
     list-style:decimal-leading-zero;
     display: flex;
-    width: 70vw;
-    justify-content: space-around;
+    width: 100vw;
+    justify-content:flex-end;
+}
+
+.navegacion a{
+    text-decoration: none;
 }
 
 nav ul li{
     margin-right: 2vw ;
-    margin-left: 2vw;
+    margin-left: 3vw;
+    color: #d5b0f1;
 }
-nav ul li:hover{
+
+a:hover{
     text-decoration: underline ;
     color: #d5b0f1;
 
 }
+
 .ham{
     display: none;
     cursor: pointer;
@@ -54,6 +70,7 @@ nav ul li:hover{
     background-color: transparent;
     padding: 0;
 }
+
 .ham span{
     display: block;
     background-color: #FEFCFD;
@@ -62,15 +79,55 @@ nav ul li:hover{
     margin: 10px auto;
     border-radius: 5px;
 }
+
 main{
     height:100vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    z-index: 1;
 }
+
 .hero{
+    display: block;
     font-size: 5vw;
+    padding-top: 15%;
+    margin-left: 5%;
 }
+
+.hero h1{
+    display: block;
+    opacity: 0;
+    animation: aparecerTexto 0.5s forwards;
+    animation-delay: 1.35s;
+}
+
+.hero p{
+    display: block;
+    opacity: 0;
+    animation: deslizamientoTexto 0.5s forwards;
+    animation-delay: 1.75s;
+}
+
+@keyframes aparecerTexto{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+@keyframes deslizamientoTexto {
+    0%{
+        transform: translateX(10%);
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
 .hero span{
     display: block;
     color: #d5b0f1;
@@ -80,6 +137,7 @@ main{
     animation: escrito 2s steps(28);
     overflow: hidden;
 }
+
 @keyframes escrito{
     from{ width: 0;
     border-right: 4px solid #d5b0f1;}
@@ -94,19 +152,135 @@ main{
     height: 98vh;
     width: 2vw;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
 }
+
 .redes ul{
     list-style: none;
 }
+
 .icon{
     fill:rgb(255, 255, 255);
     width: 25px;
     height: auto;
 }
+
 .icon:hover{
     fill: #d5b0f1;
 }
+
+.yo{
+    width: 80%;
+    height: 100vh;
+    margin-top: 20%;
+    margin-left: 10%;
+    border-radius: 9px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.informacionMia{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.informacionMia p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    
+}
+
+.informacionMia a{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+#pantalla{
+    width: 300px;
+    height: 320px;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+#linea-1{
+    height: 2px;
+    color: #FEFCFD;
+    width: 5px;
+}
+
+#foto{
+    background-image: url("../Imagenes/Foto.jpg");
+    background-color: rgba(213, 176, 241, 0.20);
+    background-size: contain;
+    width: 300px;
+    height: 320px;
+    transition: 1s;
+    background-blend-mode:screen;
+    border: #FEFCFD 3px solid;
+    border-radius: 10px;
+}
+
+#foto:hover{
+    transform: scale(1.2);
+    background-color: rgba(213, 176, 241, 0);
+}
+
+#Habilidades{
+    height: 100vh;
+    width: 73%;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+.tecnologias{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 1.8rem;
+}
+
+.tecno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#js{
+    height: 345px;
+    width: auto;
+    fill: #f0da50;
+}
+
+.icono{
+    width: 240px ;
+    height: auto;
+    fill:#d5b0f1
+}
+
+.diseño{
+    margin-top: 5%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.secundarias{
+    width: 50px;
+    fill: #FEFCFD;
+    margin-left: 25%;
+    
+}
+
 /*Diseño Responsivo*/
 @media(max-width:768px){
     .ham{
@@ -122,19 +296,25 @@ main{
         top: 0;
         right: 0;
         height: 100vh;
+        width: 80vw;
         margin-left: 10vw;
-        z-index: 9998;
+        z-index: 100;
+        justify-content: space-around;
         flex-direction: column;
         align-items: center;
         font-size: 6vw;
         padding-left: 7vw;
         display: none;
-        
     }
     .navegacionActivada{
         display: flex;
         animation: muestraMenu 1s ease-in-out both;
     }
+@media(max-width:466px){
+    .navegacion{
+        width: 65vw;
+    }
+}
 /*Animaciones*/
 
     @keyframes muestraMenu{

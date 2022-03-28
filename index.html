@@ -18,10 +18,10 @@
         <nav class="navegacion_container">        
 
             <ul class="navegacion">
-                <li>Sobre Mi</li>
-                <li>Habilidades</li>
-                <li>Proyectos</li>
-                <li>Contacto</li>
+                <li> <a href="#Sobre Mi">Sobre Mi</a>  </li>
+                <li> <a href="#Habilidades">Habilidades</a></li>
+                <li> <a href="#Proyectos">Proyectos</a></li>
+                <li> <a href="#Contacto">Contacto</a> </li>
             </ul>
 
             <button class="ham" type="button">
@@ -43,13 +43,47 @@
         </ul>
     </aside>
     <main>
-
         <div class="hero">
             <span>Hola mi nombre es</span>
             <h1>Mauro Parente</h1>
-            <p>Y soy Front End Developer</p>
+            <p>Front End Developer</p>
         </div>
         
+        <div id="Sobre Mi" class="yo">
+            
+            <div class="informacionMia"><h3>Estudiante de Tecnicatura Superior en Desarrollo de Software</h3>
+                <br><hr><br>
+                <p>Hola soy Mauro! Soy una persona que disfruta de crear cosas, y con la programación puedo hacerlo.
+                En febrero de 2022 me dediqué a estudiar programación Web. Me encanta poder solucionar problemas, crear animaciones y brindar una buena experiencia y dinámica a los usuarios.
+                Estoy interesado en el aspecto Front End y en el Back End (aunque de este último tengo mucho que aprender), brindo mucho empeño a cada proyecto que afronto debido a que estos me hacen adquirir nuevos conocimientos y además puedo poner en práctica mis conocimientos.
+                La programación para mi es mas que un oficio, desde que empecé a estudiar descubrí que es lo que me apasiona, poder hacer realidad cosas que pasan por mi cabeza me volvió una persona muy feliz.
+                Poder trabajar en este ámbito es un sueño para mi, una oportunidad increíble para poder crecer como desarrollador. 
+                </p>
+                <a href="">Contactate conmigo</a>
+            </div>
+
+            <div id="pantalla">
+                
+                <div id="foto"></div>
+                       
+            </div>
+        </div>
+
+        <div id="Habilidades">
+            <h3>Habilidades</h3>
+            <br><hr><br>
+            <ul class="tecnologias">
+                <li class="tecno"> HTML <svg xmlns="http://www.w3.org/2000/svg" class="icono" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg></li>
+                <li class="tecno"> JavaScript <svg fill="#d5b0f1"  id="js" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="300px" height="300px"><path d="M45.274,2.325C45.084,2.118,44.817,2,44.536,2H5.464C5.183,2,4.916,2.118,4.726,2.325S4.443,2.81,4.468,3.089l3.52,39.427 c0.037,0.412,0.324,0.759,0.722,0.873l16.01,4.573C24.809,47.987,24.902,48,24.994,48s0.185-0.013,0.274-0.038l16.024-4.573 c0.398-0.114,0.685-0.461,0.722-0.873l3.518-39.427C45.557,2.81,45.463,2.532,45.274,2.325z M12,29.004l7,1.942V11h4v26l-11-3.051 V29.004z M38.054,22L37,34.25L27,37v-4.601l6.75-1.855l0.25-3.75L27,28V11h12l-0.345,4H31v8L38.054,22z"/></svg></li>
+                <li class="tecno"> CSS <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icono" ><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg></li>
+            </ul>
+            <ul class="diseño">
+                <li>Otras habilidades:</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" class="secundarias" viewBox="0 0 384 512"><path d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"/></svg></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" class="secundarias" viewBox="0 0 24 24" ><path d="M 5 3 C 3.9 3 3 3.9 3 5 L 3 19 C 3 20.1 3.9 21 5 21 L 19 21 C 20.1 21 21 20.1 21 19 L 21 5 C 21 3.9 20.1 3 19 3 L 5 3 z M 6.890625 8 L 9.5898438 8 C 11.915844 8 12.193359 10.140469 12.193359 10.605469 C 12.192359 12.465469 10.891641 13.115234 9.6816406 13.115234 L 8.5644531 13.115234 L 8.5644531 15.90625 L 6.890625 15.90625 L 6.890625 8 z M 8.5644531 9.3027344 L 8.5644531 11.814453 L 9.6816406 11.814453 C 10.425641 11.814453 10.611328 11.256469 10.611328 10.605469 C 10.612328 9.9534687 10.333641 9.3027344 9.6816406 9.3027344 L 8.5644531 9.3027344 z M 15.169922 9.953125 C 16.564922 9.953125 17.308594 10.791453 17.308594 11.814453 L 15.728516 11.814453 C 15.728516 11.349453 15.541922 11.070312 15.169922 11.070312 C 14.890922 11.070312 14.611328 11.256906 14.611328 11.628906 C 14.611328 12.558906 17.310547 12.279172 17.310547 14.326172 C 17.309547 15.721172 15.913922 16 15.169922 16 C 13.681922 16 12.9375 14.976875 12.9375 14.046875 L 14.425781 14.046875 C 14.425781 14.790875 14.983922 14.884766 15.169922 14.884766 C 15.541922 14.884766 15.820313 14.698172 15.820312 14.326172 C 15.820312 13.489172 13.121094 13.581703 13.121094 11.720703 C 13.121094 10.325703 14.424922 9.953125 15.169922 9.953125 z"/></svg></li>
+            </ul>
+        </div>
+    
     </main>
     <script src="./Javascript/main.js" type="module"></script>
 </body>
