@@ -23,7 +23,7 @@ body{
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 7vh;
     font-size: 1.2rem;
     -webkit-backdrop-filter: blur(10px);
@@ -84,11 +84,13 @@ main{
     height:100vh;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     z-index: 1;
 }
 
 .hero{
     display: block;
+    width: 85%;
     font-size: 5vw;
     padding-top: 15%;
     margin-left: 5%;
@@ -102,7 +104,7 @@ main{
 }
 
 .hero p{
-    display: block;
+    width: 70%;
     opacity: 0;
     animation: deslizamientoTexto 0.5s forwards;
     animation-delay: 1.75s;
@@ -132,15 +134,18 @@ main{
     display: block;
     color: #d5b0f1;
     white-space: nowrap;
-    width: 28ch;
-    
-    animation: escrito 2s steps(28);
+    width: 25ch;
+    margin:0;
+    animation: escrito 2s steps(25);
     overflow: hidden;
 }
 
 @keyframes escrito{
-    from{ width: 0;
-    border-right: 4px solid #d5b0f1;}
+    from{ 
+    width: 0;
+    border-right: 4px solid #d5b0f1;
+    margin-right: 0;
+    }
 
 }
 
@@ -149,7 +154,7 @@ main{
     flex-direction: column;
     justify-content: flex-end;
     margin-left: 0.4%;
-    height: 98vh;
+    height: 95vh;
     width: 2vw;
     position: fixed;
     z-index: 9999;
@@ -174,7 +179,6 @@ main{
 
 .yo{
     width: 80%;
-    height: 100vh;
     margin-top: 20%;
     margin-left: 10%;
     border-radius: 9px;
@@ -208,6 +212,7 @@ h3{
 }
 
 #pantalla{
+    
     width: 300px;
     height: 320px;
     transition: 1s;
@@ -221,6 +226,7 @@ h3{
 }
 
 #foto{
+    
     background-image: url("../Imagenes/Foto.jpg");
     background-color: rgba(213, 176, 241, 0.20);
     background-size: contain;
@@ -261,13 +267,12 @@ h3{
 }
 
 #js{
-    height: 345px;
-    width: auto;
+    width: 90%;
     fill: #f0da50;
 }
 
 .icono{
-    width: 240px ;
+    width: 50% ;
     height: auto;
     fill:#d5b0f1
 }
@@ -343,7 +348,6 @@ input{
     justify-content: center;
     align-items: center;
     box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.75);
-    
 }
 #asunto{
     grid-column: 1/3;
@@ -357,14 +361,104 @@ footer{
     text-align: right;
     margin-top: 5%;
 }
+
+.modal_contenedor{
+    visibility:hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_contorno{
+    width: 85vw;
+    height: 95vh;
+    background: linear-gradient(to right, #41295a, #2f0743); 
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size:1.5rem;
+    border-radius: 10px;
+}
+
+.modal_contorno h1{
+    font-size: 1.7rem;
+}
+
+#visual_landing{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.modal_contorno ul{
+    display: grid;
+    grid-template-columns: 60% 30%;
+    list-style: none;
+    align-items: flex-end;
+}
+
+.modal_contorno p{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+#landing_links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 15%;
+    gap: 20%;
+    align-items: center;
+}
+.modal_contorno p a{
+
+    text-align: center;
+}
+#tele{  
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 100%;
+}
+
+#celular{
+    width: 50%;
+}
+
+.cerrar{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.1%;
+    margin-right: 0.8%;
+}
+
+.cerrar:hover{
+    cursor: pointer;
+}
+
+
 /*Diseño Responsivo*/
 @media(max-width:768px){
+        
+    
     .ham{
         display: block;
         position: absolute;
         z-index: 9999;
         top:0;
-        right: 5%;
+        left: 85vw;
     }
 
     .navegacion{
@@ -373,26 +467,143 @@ footer{
         top: 0;
         right: 0;
         height: 100vh;
-        width: 80vw;
-        margin-left: 10vw;
+        width: 80%;
+        margin-left: 10%;
         z-index: 100;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        font-size: 6vw;
-        padding-left: 7vw;
+        font-size: 1.5rem;
         display: none;
     }
 
+    .hero{
+        margin-left: 10%;
+        font-size: 6vw;
+    }
+    .yo{
+        width: 80%;
+        margin-top: 20%;
+        margin-left: 10%;
+        border-radius: 9px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        
+    }
+    .informacionMia h3{
+        font-size: 2rem;
+    }
+    .informacionMia p{
+        font-size: 1.5rem;
+        align-items: center;
+        text-align: justify;
+        
+    }
+    .redes{
+        display: none;
+    }
+    .informacionMia{
+        margin-bottom: 5%;
+    }
+    #Habilidades{
+        margin-left: 12%;
+        
+    }
     .navegacionActivada{
         display: flex;
         animation: muestraMenu 1s ease-in-out both;
     }
+    .flex_separacion{
+        display: flex;
+        margin-top: 10%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+}
 
 @media(max-width:466px){
+
     .navegacion{
-        width: 65vw;
+        width: 65%;
     }
+
+    .informacionMia h3{
+        font-size: 1.5rem;
+    }
+
+    .hero{
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
+    .informacionMia p{
+        font-size: 1rem;
+        align-items: center;
+        text-align: justify;
+        
+    }
+
+    .modal_contorno{
+        font-size: 1.2rem;
+        
+    }
+
+    #landing_links{
+        margin: 0;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #form_nombre{
+        width: 100%;
+    }
+
+    #form_email{
+        width: 100%;
+    }
+
+    #pantalla{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin:0;
+        width: 100%;
+        height: auto;
+    }
+
+    #foto{
+        margin:0;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+
+    .tecnologias{
+        font-size: 1.2rem;
+    }
+
+    .diseño{
+        font-size: 0.8rem;
+    }
+
+    .secundarias{
+        width: 10vw;
+    }
+    #tele{
+        width: 130%;
+        margin-left: 19%;
+    }
+    .flex_separacion p{
+        font-size: 1.3rem;
+    }
+    #celular{
+        width: 70%;
+    }
+        
 }
 /*Animaciones*/
 
@@ -418,4 +629,4 @@ footer{
         transform: rotate(45deg) translate(-10px,-8px);
     }
 
-}
+
