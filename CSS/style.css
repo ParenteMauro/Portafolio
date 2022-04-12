@@ -302,9 +302,10 @@ h3{
 .grid_Proyectos{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 1em;
 }
+
 
 .imagenProyecto{
     width: 100%;
@@ -379,7 +380,7 @@ footer{
 
 .modal_contorno{
     width: 85vw;
-    height: 95vh;
+    padding-bottom: 2%;
     background: linear-gradient(to right, #41295a, #2f0743); 
     background-size: contain;
     display: flex;
@@ -448,6 +449,30 @@ footer{
     cursor: pointer;
 }
 
+
+#modal_tresEnR img{
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 5%;
+}
+.sitios_links{
+    margin-top: 1%;
+    display: flex;
+    margin-left: 20%;
+    text-align: center;
+    width: 60%;
+    justify-content: space-between;
+}
+#div_pokeimg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#modal_pokeapi img{
+    width: 650px;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
 
 /*Diseño Responsivo*/
 @media(max-width:768px){
@@ -522,6 +547,10 @@ footer{
         flex-direction: column;
         justify-content: space-between;
     } 
+    #modal_pokeapi img{
+        width: 65%;
+    }
+
 }
 
 @media(max-width:466px){
@@ -602,6 +631,9 @@ footer{
     }
     #celular{
         width: 70%;
+    }
+    #modal_pokeapi img{
+        width: 90%;
     }
         
 }

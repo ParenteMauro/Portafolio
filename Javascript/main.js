@@ -8,6 +8,9 @@ const modalContenedor = document.querySelector(".modal_contenedor")
 const tresEnR = document.querySelector("#TicTacToe")
 const modalTresEnR = document.querySelector("#modal_tresEnR")
 const cerrarTresEnR = document.querySelector("#cerrar_tresEnR")
+const pokeApi = document.querySelector("#PokeApi")
+const modalPokemon = document.querySelector("#modal_pokeapi")
+const cerrarPokeApi = document.querySelector("#cerrar_pokeapi")
 
 ham.addEventListener('click',()=>{
     navCelu.classList.toggle("navegacionActivada")
@@ -29,4 +32,12 @@ tresEnR.addEventListener('click',()=>{
 
 cerrarTresEnR.addEventListener('click',()=>{
     modalTresEnR.style.visibility = "hidden"
+})
+
+pokeApi.addEventListener('click',()=>{
+    modalPokemon.style.visibility = "visible"
+})
+
+cerrarPokeApi.addEventListener('click',()=>{
+    modalPokemon.style.visibility = "hidden"
 })
