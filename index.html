@@ -168,11 +168,15 @@
             <h3>Contacto</h3>
             <hr>
             <div class="contenedor_form">
-                <form action="">
-                    <input type="text" placeholder="Nombre" id="form_nombre">
-                    <input type="text" placeholder="E-mail" id="form_email">
-                    <input type="text" placeholder="Asunto" id="asunto">
-                    <textarea placeholder="Mensaje" id="mensajes"></textarea> 
+                <form action="https://formspree.io/f/xvolwaeb" id="form" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre" id="form_nombre">
+                    <input type="text" name="e-mail" placeholder="E-mail" id="form_email">
+                    <input type="text" name="asunto" placeholder="Asunto" id="form_asunto">
+                    <input type="text" name="mensaje" placeholder="Mensaje" id="form_mensajes">
+                    
+                    <div class="centrar_boton">
+                        <button type="submit" id="enviar_form">Enviar</button>
+                    </div>
                 </form>
             </div>
         </div>

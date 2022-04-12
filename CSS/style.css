@@ -323,7 +323,6 @@ h3{
 }
 
 #Contacto{
-    height: 100vh;
     width: 73%;
     margin-top: 20%;
     margin-left: 10%; 
@@ -332,8 +331,9 @@ form{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 40px 40px 300px;
+    grid-template-rows: 40px 40px 250px;
     gap: 1em;
+    margin-top: 1%;
 }
 input{
     color: black;
@@ -350,12 +350,24 @@ input{
     align-items: center;
     box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.75);
 }
-#asunto{
+#form_asunto{
     grid-column: 1/3;
 }
 
-#mensajes{
+#form_mensajes{
     grid-column: 1/3;
+}
+
+.centrar_boton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-column:1/3
+}
+#enviar_form{
+    height: 23px;
+    background-color: #d5b0f1;
+    width: 100px;
 }
 
 footer{
@@ -540,6 +552,13 @@ footer{
         display: flex;
         animation: muestraMenu 1s ease-in-out both;
     }
+    #foto{
+        background-color: rgba(213, 176, 241, 0);
+    }
+    #foto:hover{
+        transform: none;
+        box-shadow: none;
+    }
     .flex_separacion{
         display: flex;
         margin-top: 10%;
@@ -585,7 +604,9 @@ footer{
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr 1fr;
     }
-
+    .contenedor_form{
+        height: 470px;
+    }
     #form_nombre{
         width: 100%;
     }
@@ -621,6 +642,24 @@ footer{
 
     .secundarias{
         width: 10vw;
+    }
+
+    form{
+        grid-template-rows: 40px 40px 40px 250px;
+    }
+
+    #form_email{
+        grid-column: 1/3;
+    }
+    
+    #form_nombre{
+        grid-column: 1/3;
+    }
+    
+    #enviar_form{
+        height: 23px;
+        background-color: #d5b0f1;
+        width: 100px;
     }
     #tele{
         width: 130%;

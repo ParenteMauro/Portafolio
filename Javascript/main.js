@@ -11,6 +11,7 @@ const cerrarTresEnR = document.querySelector("#cerrar_tresEnR")
 const pokeApi = document.querySelector("#PokeApi")
 const modalPokemon = document.querySelector("#modal_pokeapi")
 const cerrarPokeApi = document.querySelector("#cerrar_pokeapi")
+const formulario = document.querySelector("#form")
 
 ham.addEventListener('click',()=>{
     navCelu.classList.toggle("navegacionActivada")
@@ -41,3 +42,21 @@ pokeApi.addEventListener('click',()=>{
 cerrarPokeApi.addEventListener('click',()=>{
     modalPokemon.style.visibility = "hidden"
 })
+
+formulario.addEventListener('submit',enviarManual)
+
+async function enviarManual(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action,{
+        method: this.method,
+        body: form,
+        headers:{
+            'Accept': 'application/json'
+        }
+    })
+    if(response.ok){
+        this.reset()
+        alert("Gracias por contactarte conmigo, te responderé pronto")
+    }
+}
